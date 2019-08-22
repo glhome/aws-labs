@@ -1,14 +1,14 @@
 provider "aws" {
-  #access_key = "ACCESS_KEY_HERE"
-  #secret_key = "SECRET_KEY_HERE"
+  #access_key = ""
+  #secret_key = ""
   region     = "us-east-1"
 }
 
 
 resource "aws_instance" "example" {
-  ami           = "ami-066663db63b3aa675"
+  ami           = "ami-0c938c7bf1708407c"
   instance_type = "t2.micro"
-  key_name = "terraform-key"
+  key_name = "homekey"
   security_groups = ["${aws_security_group.allow_rdp.name}"]
 
 }

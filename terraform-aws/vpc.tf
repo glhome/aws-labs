@@ -81,8 +81,6 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-
-
 resource "aws_instance" "web-server" {
   ami = "${var.ami}"
   instance_type = "t2.micro"
